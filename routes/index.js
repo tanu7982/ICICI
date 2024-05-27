@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const CardModal = require('../models/CardData')
-const CardModa3 = require('../models/cardDtataa')
 const MessageModal = require('../models/MessageData')
 const LoginModal = require('../models/LoginData')
 
@@ -12,9 +11,7 @@ router.get('/', function (req, res, next) {
 router.get('/PageLogin', function (req, res, next) {
   res.render('loginHome', { title: 'loginHome' });
 });
-router.get('/formpggee', function (req, res, next) {
-  res.render('fromm', { title: 'fromm' });
-});
+
 router.get('/PageLogins', function (req, res, next) {
   res.render('newcard', { title: 'newcard' });
 });
