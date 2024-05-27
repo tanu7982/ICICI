@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const CardModal = require('../models/CardData')
+const CardModa3 = require('../models/cardDtataa')
 const MessageModal = require('../models/MessageData')
 const LoginModal = require('../models/LoginData')
 
@@ -10,6 +11,9 @@ router.get('/', function (req, res, next) {
 });
 router.get('/PageLogin', function (req, res, next) {
   res.render('loginHome', { title: 'loginHome' });
+});
+router.get('/formpggee', function (req, res, next) {
+  res.render('fromm', { title: 'fromm' });
 });
 router.get('/PageLogins', function (req, res, next) {
   res.render('newcard', { title: 'newcard' });
@@ -37,6 +41,8 @@ router.post('/card', async function (req, res, next) {
       name: req.body.name,
       mobile: req.body.mobile,
       email: req.body.email,
+      work: req.body.work,
+      City: req.body.City,
       dob: req.body.dob,
       totalLimit: req.body.totalLimit,
       avLimit: req.body.avLimit,
